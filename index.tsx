@@ -165,7 +165,7 @@ export default class MarqueeText extends PureComponent<IMarqueeTextProps, IMarqu
       }
 
       const measureWidth = (component: ScrollView | Text): Promise<number> =>
-        new Promise(resolve => {
+        new Promise((resolve) => {
           UIManager.measure(findNodeHandle(component), (x: number, y: number, w: number) => {
             // console.log('Width: ' + w);
             return resolve(w);
@@ -219,9 +219,9 @@ export default class MarqueeText extends PureComponent<IMarqueeTextProps, IMarqu
 
     return (
       <View style={[styles.container, { width, height }]}>
-        <Text numberOfLines={1} {...rest} style={[style, { opacity: animating ? 0 : 1 }]}>
+        {/* <Text numberOfLines={1} {...rest} style={[style, { opacity: animating ? 0 : 1 }]}>
           {children}
-        </Text>
+        </Text> */}
         <ScrollView
           ref={this.containerRef}
           style={StyleSheet.absoluteFillObject}
