@@ -219,9 +219,9 @@ export default class MarqueeText extends PureComponent<IMarqueeTextProps, IMarqu
 
     return (
       <View style={[styles.container, { width, height }]}>
-        {/* <Text numberOfLines={1} {...rest} style={[style, { opacity: animating ? 0 : 1 }]}>
+        <Text numberOfLines={1} {...rest} style={[style, { opacity: animating ? 0 : 0 }]}>
           {children}
-        </Text> */}
+        </Text>
         <ScrollView
           ref={this.containerRef}
           style={StyleSheet.absoluteFillObject}
