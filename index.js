@@ -120,8 +120,8 @@ export default class MarqueeText extends PureComponent<DefaultProps, Props, Stat
     }
   }
 
-  componentWillReceiveProps(nextProps: Props) {
-    if (this.props.children !== nextProps.children) {
+  componentDidUpdate(prevProps: Props, prevState) {
+    if (this.props.children !== prevProps.children) {
       this.invalidateMetrics();
       this.resetAnimation();
     }
